@@ -13,6 +13,7 @@ function newTask(task) {
     $boxTasks.insertAdjacentHTML("beforeend", `
       <li class="list-tasks">
         <input
+          onclick="toggleCheck(event)"
           type="checkbox"
           name="meu-checkbox"
           data-task="task-item"
@@ -24,12 +25,6 @@ function newTask(task) {
       </li>
   `);
   })
-
-  const taskCreated = document.querySelectorAll('[data-task]');
-  taskCreated.forEach((checkedBox) => {
-    checkedBox.addEventListener('click', checkInput)
-  })
-  
 };
 
 function handleNewTask() {
