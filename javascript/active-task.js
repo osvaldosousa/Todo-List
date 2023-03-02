@@ -4,7 +4,7 @@ function showTaskActive(taskActive) {
 
   taskActive.forEach(elemento => {
     $boxTasks.insertAdjacentHTML("beforeend", `
-      <li class="teste">
+      <li class="list-tasks">
         <input
           type="checkbox"
           name="meu-checkbox"

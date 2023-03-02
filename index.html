@@ -4,33 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>To Do List</title>
   </head>
   <body>
     <main>
       <section class="box-list">
         <nav>
-          <ul>
-            <li class="task-all" id="all">Todas</li>
+          <ul class="navegation-items">
+            <li class="task-all -show" id="all">Todas</li>
             <li class="task-active" id="active">A Fazer</li>
             <li class="task-completed" id="completed">Completas</li>
           </ul>
         </nav>
 
-        <div>
+        <div class="input-task">
           <input
             class="new-task"
             type="text"
             placeholder="Nova Tarefa"
             required
           />
-          <button class="btn-new-task">Adcionar Tarefa</button>
+          <button class="btn-new-task">ADCIONAR</button>
         </div>
 
         <div id="box-tasks">
           <ul id="list-task">
-            <li>
-              <input type="checkbox" name="meu-checkbox" />
+            <li class="list-tasks">
+              <input class= "item-task" type="checkbox" checked/>
               <label for="task-item">Sua Nova Tarefa</label>
             </li>
           </ul>
