@@ -12,6 +12,14 @@ function newTask(task) {
   showTasks(allTask)
 };
 
+function clearLiClick() {
+  const liNav = document.querySelectorAll('.li-nav');
+  liNav.forEach(element => {
+    element.classList.remove('-active')
+    element.id === "all" ? element.classList.add('-active'): '';
+  })
+}
+
 function handleNewTask() {
   const tasksInput = document.querySelector('.new-task');
   const taskValue = tasksInput.value
@@ -21,6 +29,7 @@ function handleNewTask() {
   tasksInput.value = "";
 
   newTask(taskValue);
+  clearLiClick()
 };
 
 const buttonNewTask = document.querySelector('.btn-new-task');

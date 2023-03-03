@@ -27,9 +27,10 @@ main {
 
 .navegation-items li {
   cursor: pointer;
+  transition: all .2s;
 }
 
-.navegation-items .-show {
+.navegation-items .-active{
   border-bottom: 2px solid #45C4B0;
 }
 

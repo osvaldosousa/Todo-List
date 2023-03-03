@@ -6,11 +6,6 @@ function filterActive() {
   showTasks(taskActive)
 };
 
-const liTaskActive = document.querySelector('.task-active')
-liTaskActive.addEventListener('click', filterActive)
-
-// Tasks Completed
-
 function filterCompleted() {
   const taskCompleted = allTask.filter(task => {
     return task.checked === true
@@ -19,14 +14,16 @@ function filterCompleted() {
   showTasks(taskCompleted)
 };
 
-const liTaskCompleted = document.querySelector('.task-completed')
-liTaskCompleted.addEventListener('click', filterCompleted)
+function handleClickLi(event) {
+  const liClick = event.target
+  const liClass = document.querySelectorAll('.li-nav');
 
-// Filter AllTasks
+  liClass.forEach(element => {
+    element.classList.remove('-active');
+  })
+  liClick.classList.add('-active')
 
-function filterAllTasks() {
-  showTasks(allTask)
-};
-
-const liAllTasks = document.querySelector('.task-all')
-liAllTasks.addEventListener('click', filterAllTasks)
+  liClick.id === "completed" ? filterCompleted(): 
+    liClick.id === "active" ? filterActive(): 
+    showTasks(allTask)
+}
