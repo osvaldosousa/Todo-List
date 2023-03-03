@@ -1,10 +1,11 @@
 function showTasks(arrTasks) {
   const $boxTasks = document.querySelector('#list-task');
   $boxTasks.innerHTML = "";
+  console.log()
 
   arrTasks.forEach(elemento => {
     $boxTasks.insertAdjacentHTML("beforeend", `
-      <li class="list-tasks">
+      <li class="list-tasks ${elemento.checked ? '-completed': ''}">
         <input
           onclick="toggleCheck(event)"
           type="checkbox"

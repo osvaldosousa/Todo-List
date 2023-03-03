@@ -56,6 +56,11 @@ main {
   margin-bottom: 5px;
 }
 
+.list-tasks.-completed {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
 .item-task {
   margin-right: 10px;
 }
